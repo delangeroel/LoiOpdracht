@@ -1,0 +1,59 @@
+﻿<Page x:Class="LoiOpdracht.Views.CoachKeyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoiOpdracht.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CoachKeyPage">
+
+    <Border Margin="12,20,12,12">
+        <!-- Key part -->
+
+        <Grid x:Name="Key">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Naam" Grid.Row="0" Grid.Column="0"  />
+            
+
+            <StackPanel Grid.Column="1">
+                <ComboBox HorizontalAlignment="Left" Name="CoachComboBox" IsEditable="True" 
+                          VerticalAlignment="Top" Width="200"
+                          ItemsSource=  "{Binding CoachList}"
+                          DisplayMemberPath="Naam"
+SelectedItem="{Binding Index, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+   IsSynchronizedWithCurrentItem="True" 
+                          SelectedValue="{Binding SelectedCoach, 
+                                Mode=OneWay,
+                                ValidatesOnDataErrors=true, 
+                                NotifyOnValidationError=true,
+                                UpdateSourceTrigger=PropertyChanged            
+                                                }">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,0">
+                <Label  Content="{Binding ErrorText}" Foreground="OrangeRed" />
+            </StackPanel>
+
+            <StackPanel   Grid.Row="5"  Grid.ColumnSpan="3" x:Name="Buttons" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <Button Content="New"   x:Name="NewButton"  Width="130"  Margin="0,0,20,0" Click="NewButton_Click" />
+                <Button Content="Enter" x:Name="EnterButton"  Width="130"  Margin="0,0,20,0" Click="EnterButton_Click" />
+            </StackPanel>
+        </Grid>
+
+    </Border>
+</Page>
