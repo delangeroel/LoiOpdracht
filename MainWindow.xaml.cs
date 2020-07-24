@@ -1,4 +1,6 @@
-﻿using LoiOpdracht.Views;
+﻿using LoiOpdracht.Controllers;
+using LoiOpdracht.Models;
+using LoiOpdracht.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +36,10 @@ namespace LoiOpdracht
 
         private void SpelerButton_Click(object sender, RoutedEventArgs e)
         {
-
+            CoachController cc = new CoachController();
+            Coach harryp = new Coach("harry potter");
+            harryp.Voornaam = "Harrrryyy";
+            cc.save(harryp);
         }
 
         private void TeamButton_Click(object sender, RoutedEventArgs e)
@@ -43,3 +48,4 @@ namespace LoiOpdracht
         }
     }
 }
+;

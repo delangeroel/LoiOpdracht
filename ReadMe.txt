@@ -74,10 +74,10 @@ insert into [WpfStefEFC].[dbo].coach values('Coach2','Roel','1')
 insert into [WpfStefEFC].[dbo].coach values('Coach3','Tia','1')
 insert into [WpfStefEFC].[dbo].coach values('Coach4','v4','1')
 
-insert into [WpfStefEFC].[dbo].[Team]values('t1','Tennis',2,1,2)
-insert into [WpfStefEFC].[dbo].[Team]values('t2','Schaken',2,2,3)
-insert into [WpfStefEFC].[dbo].[Team]values('t3','Vissen',3,3,4)
-insert into [WpfStefEFC].[dbo].[Team]values('t4','Hardlopen',2,4,5)
+insert into LoiOpdracht.[dbo].Team values('t1','Team1','Tennis',2,1,2)
+insert into LoiOpdracht.[dbo].Team values('t2','Team2','Schaken',2,2,3)
+insert into LoiOpdracht.[dbo].Team values('t3','Team3','Vissen',3,3,4)
+insert into LoiOpdracht.[dbo].Team values('t4','Team4','Hardlopen',2,4,5)
 
 ---------------------------------------------------------------------------
 -- Modelling
