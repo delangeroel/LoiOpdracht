@@ -36,15 +36,14 @@ namespace LoiOpdracht
 
         private void SpelerButton_Click(object sender, RoutedEventArgs e)
         {
-            CoachController cc = new CoachController();
-            Coach harryp = new Coach("harry potter");
-            harryp.Voornaam = "Harrrryyy";
-            cc.save(harryp);
+            SpelerView spelerView = new SpelerView();
+            spelerView.Show();
         }
 
         private void TeamButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TeamView teamView = new TeamView();
+            teamView.Show();
         }
     }
 }

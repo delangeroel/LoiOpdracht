@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SpelerKeyPage">
-
     <Border Margin="12,20,12,12">
         <!-- Key part -->
+
         <Grid x:Name="Key">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
@@ -25,31 +25,36 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Content="Naam" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Naam" Grid.Row="0" Grid.Column="0" />
 
-            <ComboBox Name="Speler1ComboBox" IsEditable="True" Grid.Row="0" Grid.Column="1"
-                      Width="200" 
-                      ItemsSource=  "{Binding SpelerList}" 
-                      DisplayMemberPath="Naam"
-                      SelectedItem="{Binding Index, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
-                      SelectedValue="{Binding SelectedSpeler, 
+            <StackPanel Grid.Column="1">
+                <ComboBox HorizontalAlignment="Left" Name="Speler1ComboBox" IsEditable="True" 
+                          VerticalAlignment="Top" Width="200"
+                          ItemsSource=  "{Binding SpelerList}"
+                          DisplayMemberPath="Naam"
+                          SelectedItem="{Binding Index, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+                          IsSynchronizedWithCurrentItem="True" 
+                          Validation.Error="Validation_Error"
+                          SelectedValue="{Binding SelectedSpeler, 
                                 Mode=OneWay,
                                 ValidatesOnDataErrors=true, 
                                 NotifyOnValidationError=true,
                                 UpdateSourceTrigger=PropertyChanged            
                                                 }">
-                
-            </ComboBox>
-
-            <Label  Content="{Binding ErrorText}" Foreground="OrangeRed" Grid.Row="1" Grid.Column="1"/>
-
-            <StackPanel   Grid.Row="5" Grid.ColumnSpan="3" x:Name="Buttons" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-                <Button Content="Save"   x:Name="SaveButton"     Width="130"  Margin="0,0,20,0" Click="SaveButton_Click" />
-                <Button Content="Delete" x:Name="DeleteButton"  Width="130"  Margin="0,0,20,0" Click="DeleteButton_Click" />
-                <Button Content="Cancel" x:Name="CancelButton" Width="130"  Margin="0,0,20,0" Click="CancelButton_Click" />
+                    <!--  DisplayMemberPath="Naam"
+                          SelectedValuePath="Naam"
+                       -->
+                </ComboBox>
             </StackPanel>
-            
 
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,0">
+                <Label  Content="{Binding ErrorText}" Foreground="OrangeRed" />
+            </StackPanel>
+
+            <StackPanel   Grid.Row="5"  Grid.ColumnSpan="3" x:Name="Buttons" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <Button Content="New"   x:Name="NewButton"  Width="130"  Margin="0,0,20,0" Click="NewButton_Click"/>
+                <Button Content="Enter" x:Name="EnterButton"  Width="130"  Margin="0,0,20,0" Click="EnterButton_Click"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Page>

@@ -23,11 +23,45 @@
                 <RowDefinition Height="23"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <!-- Output part -->
+
+            <!-- Straat -->
+            <Label Content="Naam" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" />
+            <!-- Straat -->
+            <Label Content="Straat" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" />
+            <!-- Plaats -->
+            <Label Content="Plaats" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" />
+
+            <!-- Active -->
+            <Label Content="Actief" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" />
+
+
+            <!-- Input part -->
+
+            <!-- TeamNaam -->
+            <TextBox Text="{Binding Speler1.Naam, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" 
+                     Grid.Row="0" Grid.Column="1" Name="TeamNaamFld"  AcceptsReturn="True"/>
+
+            <!-- Input Straatnaam -->
+            <TextBox Text="{Binding Speler1.Straatnaam}" 
+                     Grid.Row="2" Grid.Column="1" Name="StraatnaamFld"  />
+
+            <!-- Input Woonplaats -->
+            <TextBox Text="{Binding Speler1.Woonplaats }" 
+                     Grid.Row="3" Grid.Column="1" Name="WoonplaatsFld"  />
+
+            <!-- Input Aktief -->
+            <CheckBox IsChecked="{Binding Speler1.Aktief}" 
+                      Grid.Row="4" Grid.Column="1" Name="AktiefFld" />
+
+            <!-- Error -->
+            <Label  Content="{Binding ErrorText}" Grid.Row="5" Grid.Column="1" Foreground="OrangeRed" />
+
             <StackPanel   Grid.Row="5" Grid.ColumnSpan="3" x:Name="Buttons" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-        <Button Content="Save"   x:Name="SaveButton"     Width="130"  Margin="0,0,20,0" Click="SaveButton_Click" />
-        <Button Content="Delete" x:Name="DeleteButton"  Width="130"  Margin="0,0,20,0" Click="DeleteButton_Click" />
-        <Button Content="Cancel" x:Name="CancelButton" Width="130"  Margin="0,0,20,0" Click="CancelButton_Click" />
-    </StackPanel>
-    </Grid>
+                <Button Content="Save"   x:Name="SaveButton"     Width="130"  Margin="0,0,20,0" Click="SaveButton_Click"/>
+                <Button Content="Delete" x:Name="DeleteButton"  Width="130"  Margin="0,0,20,0" Click="DeleteButton_Click"/>
+                <Button Content="Cancel" x:Name="CancelButton" Width="130"  Margin="0,0,20,0" Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
     </Border>
 </Page>

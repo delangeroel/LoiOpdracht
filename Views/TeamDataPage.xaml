@@ -70,7 +70,7 @@
                   SelectedValue="{Binding SelectedTeam.Coach.CoachId,
                                 Mode=TwoWay,
                                 NotifyOnValidationError=true,
-                                UpdateSourceTrigger=PropertyChanged}" SelectionChanged="CoachComboBox_SelectionChanged" >
+                                UpdateSourceTrigger=PropertyChanged}" >
             </ComboBox>
 
 
@@ -107,10 +107,13 @@
 
 
 
+
+
+
             <StackPanel   Grid.Row="9" Grid.ColumnSpan="3" x:Name="Buttons" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-                <Button Content="Save"   x:Name="SaveButton"     Width="130"  Margin="0,0,20,0" Click="SaveButton_Click" />
-                <Button Content="Delete" x:Name="DeleteButton"  Width="130"  Margin="0,0,20,0" Click="DeleteButton_Click" />
-                <Button Content="Cancel" x:Name="CancelButton" Width="130"  Margin="0,0,20,0" Click="CancelButton_Click" />
+                <Button Content="Save"   x:Name="SaveButton"     Width="130"  Margin="0,0,20,0" Click="SaveButton_Click"/>
+                <Button Content="Delete" x:Name="DeleteButton"  Width="130"  Margin="0,0,20,0" Click="DeleteButton_Click"/>
+                <Button Content="Cancel" x:Name="CancelButton" Width="130"  Margin="0,0,20,0" Click="CancelButton_Click"/>
             </StackPanel>
         </Grid>
     </Border>

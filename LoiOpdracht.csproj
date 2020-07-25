@@ -227,11 +227,17 @@
     <Compile Include="Views\SpelerKeyPage.xaml.cs">
       <DependentUpon>SpelerKeyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SpelerView.xaml.cs">
+      <DependentUpon>SpelerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TeamDataPage.xaml.cs">
       <DependentUpon>TeamDataPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TeamKeyPage.xaml.cs">
       <DependentUpon>TeamKeyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView.xaml.cs">
+      <DependentUpon>TeamView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -265,11 +271,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SpelerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TeamDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TeamKeyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

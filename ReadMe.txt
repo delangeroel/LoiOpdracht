@@ -61,18 +61,18 @@ PM>Add-Migration
 PM> Update-Database -c MyContext
 
 
-insert into [WpfStefEFC].[dbo].speler values('Speler1','s1','w1','1')
-insert into [WpfStefEFC].[dbo].speler values('Speler2','s2','w2','1')
-insert into [WpfStefEFC].[dbo].speler values('Speler3','s3','w3','1')
-insert into [WpfStefEFC].[dbo].speler values('Speler4','s4','w4','1')
-insert into [WpfStefEFC].[dbo].speler values('Speler5','s5','w5','1')
-insert into [WpfStefEFC].[dbo].speler values('Speler6','s6','w6','0')
-insert into [WpfStefEFC].[dbo].speler values('Speler7','s7','w7','0')
+insert into [LoiOpdracht].[dbo].speler values('Speler1','s1','w1','1')
+insert into [LoiOpdracht].[dbo].speler values('Speler2','s2','w2','1')
+insert into [LoiOpdracht].[dbo].speler values('Speler3','s3','w3','1')
+insert into [LoiOpdracht].[dbo].speler values('Speler4','s4','w4','1')
+insert into [LoiOpdracht].[dbo].speler values('Speler5','s5','w5','1')
+insert into [LoiOpdracht].[dbo].speler values('Speler6','s6','w6','0')
+insert into [LoiOpdracht].[dbo].speler values('Speler7','s7','w7','0')
 
-insert into [WpfStefEFC].[dbo].coach values('Coach1','Harry','1')
-insert into [WpfStefEFC].[dbo].coach values('Coach2','Roel','1')
-insert into [WpfStefEFC].[dbo].coach values('Coach3','Tia','1')
-insert into [WpfStefEFC].[dbo].coach values('Coach4','v4','1')
+insert into [LoiOpdracht].[dbo].coach values('Coach1','Harry','1')
+insert into [LoiOpdracht].[dbo].coach values('Coach2','Roel','1')
+insert into [LoiOpdracht].[dbo].coach values('Coach3','Tia','1')
+insert into [LoiOpdracht].[dbo].coach values('Coach4','v4','1')
 
 insert into LoiOpdracht.[dbo].Team values('t1','Team1','Tennis',2,1,2)
 insert into LoiOpdracht.[dbo].Team values('t2','Team2','Schaken',2,2,3)
