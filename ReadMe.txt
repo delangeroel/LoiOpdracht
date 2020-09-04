@@ -12,7 +12,7 @@ Tabellen of bestanden maken
 
 
 >Menu Tools
->Nu het package manager
+>Nuget package manager
 >Package manager console
 Op het prompt kun je commando's intoetsen. Het volgende commanda laad het Entity Framework in je applciatie.
 PM> Install-Package Microsoft.EntityFrameworkCore.SqlServer
@@ -57,7 +57,7 @@ PM> Add-Migration  InitialCreate -Context  MyContext
 PM> Update-Database -c MyContext
 
 Daarna
-PM>Add-Migration
+PM> Add-Migration
 PM> Update-Database -c MyContext
 
 

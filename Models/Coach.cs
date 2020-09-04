@@ -13,7 +13,7 @@ namespace LoiOpdracht.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CoachId { get; set; }
-        [Required]
+         
         public string Voornaam { get; set; }
         public Boolean Active { get; set; }
         public Coach() { }

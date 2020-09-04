@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using LoiOpdracht.Models;
+using System.Threading.Tasks;
 
 namespace LoiOpdracht.Controllers
 {
@@ -40,7 +41,7 @@ namespace LoiOpdracht.Controllers
         {
             using (var ctx = new MyContext())
             {
-                List<Team> lst = ctx.Team.OrderBy(a => a.TeamNaam)
+                List<Team> lst = ctx.Team
                     //.OrderBy(b => b.Naam)// Toon op volgorde van naam
                     .ToList();
                 return lst;
@@ -101,8 +102,10 @@ namespace LoiOpdracht.Controllers
                 {
                     try
                     {
+                        
                         if (Team.TeamId == 0)
                         {
+                             
                             context.Team.Add(Team);
                             context.SaveChanges();
                         }
@@ -114,8 +117,9 @@ namespace LoiOpdracht.Controllers
                         transaction.Commit();
                         return true;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        string roel = ex.ToString();
                         transaction.Rollback();
                         return false;
                     }
